@@ -8,7 +8,6 @@ form.addEventListener("submit", (e) => {
   let task = input.value;
   if (task) {
     createEL(task);
-    rebleData();
 
     input.value = "";
     localStorage.setItem("data", JSON.stringify(task));
@@ -19,7 +18,7 @@ form.addEventListener("submit", (e) => {
 
 
 ( function() {
-    input.value = JSON.parse(localStorage.getItem("data"));
+    input.value = JSON.parse(localStorage.getItem(""));
 })()
 
 function createEL(task) {
